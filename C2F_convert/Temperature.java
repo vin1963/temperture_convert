@@ -16,4 +16,11 @@ public class Temperature {
     public static double fahrenheitToCelsius(double fahrenheit) {
         return (fahrenheit - 32.0) * 5.0 / 9.0;
     }
+   // add new method validate temperature
+   public static double celsiusToFahrenheit(double celsius) {
+    if (celsius < -273.15) {
+        throw new IllegalArgumentException("溫度不可低於絕對零度 (-273.15°C)");
+    }
+    return celsius * 9.0 / 5.0 + 32.0;
+   }
 }
